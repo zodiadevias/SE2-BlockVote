@@ -1,9 +1,22 @@
-<app-left-sidebar
-  [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
-  (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)"
-/>
+@if(isLoggedIn){
+  <app-left-sidebar
+    [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
+    (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)"
+  />
 
-<app-main
-  [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
-  [screenWidth]="screenWidth()"
-/>
+  <app-main
+    [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
+    [screenWidth]="screenWidth()"
+  />
+}
+@else {
+  <div>
+    
+     <button (click)="login()" id="btn-login"><img src="./img/MetaMask-icon-fox.svg" class="icon">Login with MetaMask</button>
+  </div>
+}
+
+
+
+
+
