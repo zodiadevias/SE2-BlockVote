@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
 
 
 
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   login() {
     this.isLoggedIn = true;
